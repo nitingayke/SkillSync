@@ -1,11 +1,11 @@
 import React from "react";
-import NavBar from "./components/NavBar";
+import HomeScreen from "./screens/HomeScreen";
 
 function App() {
 
   return (
     <>
-      <NavBar/>
+      <HomeScreen/>
     </>
   );
 }
