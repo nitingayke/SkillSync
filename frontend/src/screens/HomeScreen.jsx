@@ -74,7 +74,7 @@ const HomeScreen = () => {
         </div>
 
         {/* mobile code  */}
-        <div className="relative lg:-top-10 border-1 dark:border-0 w-11/12 sm:w-2/3 p-2 gap-3 mx-auto flex flex-col bg-white justify-between items-center rounded-lg">
+        <div className="relative lg:-top-10 border-1 lg:hidden dark:border-0 w-11/12 sm:w-2/3 p-2 gap-3 mx-auto flex flex-col bg-white justify-between items-center rounded-lg">
   {/* Column layout for all images */}
   <div className="flex flex-col w-full  gap-4">
     <h2 className="justify-center items-center flex pt-5">Team Unity</h2>
