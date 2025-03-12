@@ -23,7 +23,6 @@ export default function Login() {
             return;
         }
 
-
         setIsLoading(true);
 
         const response = await loginUser({ email, password });

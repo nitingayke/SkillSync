@@ -24,19 +24,22 @@ export default function Register() {
             return;
         }
 
+        try {
+            setIsLoading(true);
 
-        setIsLoading(true);
+            const response = await registerUser({ fullName, email, password });
 
-        const response = await registerUser({ fullName, email, password });
-
-        if (response.success) {
-            enqueueSnackbar(response.message, { variant: "success" });
-            navigate("/login"); // Redirect to login page
-        } else {
-            enqueueSnackbar(response.message, { variant: "error" });
+            if (response.success) {
+                enqueueSnackbar(response.message, { variant: "success" });
+                navigate("/login"); // Redirect to login page
+            } else {
+                enqueueSnackbar(response.message, { variant: "error" });
+            }
+        } catch (error) {
+            enqueueSnackbar(err)
+        } finally {
+            setIsLoading(false);
         }
-
-        setIsLoading(false);
     };
 
     return (
