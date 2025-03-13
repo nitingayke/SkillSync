@@ -6,6 +6,7 @@ import membercard2 from "../assets/membercard2.png";
 import membercard3 from "../assets/membercard3.png";
 import membercard4 from "../assets/membercard4.png";
 import fullImage from "../assets/fullImage.png";
+import { useNavigate } from "react-router-dom";
 
 const HomeScreen = () => {
   return (
@@ -29,7 +30,7 @@ const HomeScreen = () => {
             Here We Help To Find Team Mates For Hackathons, Ideathons, and Group
             Projects
           </p>
-          <button className="bg-white py-2 text-sm sm:text-lg px-6 rounded-full text-black hover:bg-blue-600 hover:text-white transition">
+          <button className="bg-white py-2 text-sm sm:text-lg px-6 rounded-full text-black hover:bg-blue-600 hover:text-white transition" navi>
             Find Your Teammate
           </button>
         </div>

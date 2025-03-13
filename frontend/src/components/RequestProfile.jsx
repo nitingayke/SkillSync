@@ -37,7 +37,7 @@ const RequestProfile = () => {
 
         <div className="flex justify-between items-center mb-6 sm:mb-8">
           <button className="p-1.5 sm:p-2 hover:bg-gray-100 rounded-full transition-colors">
-            <button>
+            <button onClick={() => navigate("/")}>
               <img src={ArrowLeft} alt="Back" className="w-6 h-6 sm:w-6 sm:h-6" />
             </button>
           </button>
