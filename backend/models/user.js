@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import bcrypt from "bcryptjs";
 
 const userSchema = new mongoose.Schema(
     {
@@ -17,6 +18,9 @@ const userSchema = new mongoose.Schema(
             lowercase: true,
             match: [/\S+@\S+\.\S+/, "Please enter a valid email"]
         },
+        phoneNo: {
+            type: Number,
+        },  
         currentLocation: {
             type: String,
             default: ""
@@ -37,7 +41,16 @@ const userSchema = new mongoose.Schema(
         availability: {
             type: Boolean,
             default: true
+        },
+        gender: {
+            type: String,
+            enum: ["Male", "Female", "Other"],
+        },
+        location: {
+            type: String,
+            default: 'India',
         }
+
     },
     { timestamps: true }
 );

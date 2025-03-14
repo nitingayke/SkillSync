@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const API_URL = "https://your-api-endpoint.com/api/auth"; // Replace with actual API URL
+const API_URL = "http://localhost:5000/api/auth";
 
-// User Registration
+// Register User
 const registerUser = async (userData) => {
     try {
-        const response = await axios.post(`https://your-api-endpoint.com/api/auth/register`, userData);
+        const response = await axios.post(`${API_URL}/register`, userData);
         return { success: true, message: "Registration successful!", data: response.data };
     } catch (error) {
         return {
@@ -15,10 +15,9 @@ const registerUser = async (userData) => {
     }
 };
 
-// User Login
 const loginUser = async (userData) => {
     try {
-        const response = await axios.post(`https://your-api-endpoint.com/api/auth/login`, userData);
+        const response = await axios.post(`${API_URL}/login`, userData);
         return { success: true, message: "Login successful!", data: response.data };
     } catch (error) {
         return {
@@ -56,7 +55,6 @@ const updateUserProfile = async (userData) => {
 
         return response.data;
     } catch (error) {
-        console.error("Error updating profile:", error.response?.data || error.message);
 
         return {
             success: false,

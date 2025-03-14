@@ -31,7 +31,7 @@ export default function Register() {
 
             if (response.success) {
                 enqueueSnackbar(response.message, { variant: "success" });
-                navigate("/login"); // Redirect to login page
+                navigate("/"); // Redirect to home page
             } else {
                 enqueueSnackbar(response.message, { variant: "error" });
             }
